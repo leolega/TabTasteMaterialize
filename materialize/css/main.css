@@ -1,0 +1,286 @@
+/* AQUI TODO EL HEADER */
+.header{
+    background-image: url(../img/bg-head.png);
+    background-position: center;
+    background-size: cover;
+}
+/* corrige un error del svg wave */
+img[src="./img/cuts/cut-header.svg"] {
+  display: block;
+}
+/* tamaño de logo y pixeles minimos para cambiar de tamaño */
+.img-logo{
+    width: 80px;
+}
+@media (max-width: 500px) {
+    .img-logo{
+        width: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+    .navsize{
+        font-size: 8px;
+  }
+}
+
+
+.header::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+.vh-50{
+    height: 90vmin;
+}
+
+.vh-40{
+  height: 35vmin;
+}
+/* tamaño letra description */
+.small-text {
+  font-size: 2em; 
+}
+.uppercase {
+  text-transform: uppercase;
+}
+/* AQUI LO DE LAS CARDS */
+
+/* scroll horizontal para cards */
+.scroll{
+    display: flex;
+    overflow-x:auto;
+}
+
+.card-img{
+    width: 300px;
+    height: 360px;
+}
+
+
+/* Efecto de selccion card */
+.card-img-filter{
+    filter: brightness(50%);
+    border-radius: 20px;
+    
+}
+
+.card{
+    width: 300px;
+    height: 360px;
+    transition-duration: 0.3s;
+    
+}
+.card-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hotel-card {
+  width: 100%;
+  height: 100%;
+}
+/* EFECTO DE SELECCION PARA IMAGENES SIMPLES */
+.card-effect2:hover .card {
+  filter: brightness(130%);
+}
+/* Efecto de texto seleccion */
+
+.card-effect:hover .card {
+    filter: brightness(130%);
+}
+/* Efecto de texto seleccion */
+
+.card-effect:hover .card-img-overlay{
+    transform: scale(0.001);
+}
+.card-img-overlay{
+    transition-duration: 0.2s;
+}
+/* esto es el margen de la descripcion respecto al nav */
+.description-row {
+  margin-top: 50px; 
+}
+/* Tipo de letra solo para esas */
+/* quita el sombreado del borde de el nav */
+.nav-extended {
+  box-shadow: none !important;
+}
+#nav-mobile li a {
+  font-size: 20px; /* Ajusta este valor a tu gusto */
+}
+.navsize a {
+    font-family: 'Alata', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.1s ease-in-out, border-bottom 0.1s ease-in-out;
+    margin-right: 10px;
+  }
+  
+  .navsize a:not(.logo-link):hover {
+    color: rgb(223, 223, 223) !important;
+    border-bottom: 2px solid rgb(223, 223, 223);
+    padding-bottom: 0.5px;
+  }
+/* Esto pone el tipo de letra a esas etiquetas */
+  h1, h2, h3, h4, p, a {
+    font-family: 'Alata', sans-serif;
+    text-decoration: none;
+  }
+/* esto es para resaltar textoss */
+  .resaltado {
+    font-size: 30px;
+    color: white;
+    -webkit-text-stroke: 0.5px rgb(185, 185, 185);
+    
+  }
+  .resaltado2{
+
+    -webkit-text-stroke: 3px rgb(253, 253, 253);
+
+  }
+  /* Esto es todo del footer el color e iconos */
+  .footer-logo {
+    display: block;
+    margin: 0 auto;
+    width: 80px; /* Ajusta este valor a tu gusto */
+  }
+  .footer-text {
+    text-align: center;
+    color: white;
+  }
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .btn-secondary {
+    background-color: transparent;
+    border: 2px solid gray;
+    color: gray;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .btn-secondary:hover {
+    background-color: gray;
+    color: white;
+  }
+
+/* es para las fotos que no tienen efectos */
+.card2 {
+  height: 250px;
+  overflow: hidden;
+}
+.card-img-simple{
+  border-radius: 20px;
+  margin-right: 20%;
+    width: 350px;
+   
+
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+   /* Estilos para las tarjetas */
+   .card {
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+.card-title {
+    background-color: #6f9bca; /* Color de fondo para el título de las tarjetas */
+    color: #fff; /* Texto blanco para el título */
+    padding: 10px; /* Espacio alrededor del título */
+    border-radius: 10px; /* Bordes redondeados para el título */
+    font-weight: bold; /* Texto en negrita para el título */
+}
+.hotel-title {
+  background-color: #6f9bca; /* Color de fondo para el título de las tarjetas */
+  color: #fff; /* Texto blanco para el título */
+  text-align: center;
+  border-radius: 10px; /* Bordes redondeados para el título */
+  padding: 5px 5px;
+
+}
+
+.animate-fade {
+  opacity: 0;
+  transform: translateY(20px); 
+  transition: opacity 2s ease, transform 1s ease;
+}
+
+.animate-fade.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilos personalizados para la animación de crecimiento gradual */
+.animated-card {
+  opacity: 0; /* Inicialmente, las tarjetas están ocultas */
+  animation: fadeIn 2s; /* Aplicamos la animación con una duración de 1 segundo */
+}
+
+/* Definición de la animación de crecimiento gradual */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9); /* Escala inicial menor que 1 */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* Escala final igual a 1 (sin cambio de tamaño) */
+  }
+}
+
+/* Añadimos una regla para que la opacidad se mantenga en 1 al final de la animación */
+.animated-card.final-state {
+  opacity: 1;
+}
+
+.image-rounded {
+  border-radius: 10px; /* Ajusta el valor según tu preferencia */
+}
+
+.animate-fade {
+  opacity: 0;
+  transform: translateY(20px); 
+  transition: opacity 2s ease, transform 1s ease;
+}
+
+.animate-fade.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.animated-card {
+  opacity: 0; 
+  animation: fadeIn 2s;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9); 
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animated-card.final-state {
+  opacity: 1;
+}
+
+
+
